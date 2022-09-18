@@ -18,8 +18,6 @@ class BookSeeder extends Seeder
     {
         $response = Http::get('https://fakerapi.it/api/v1/books?_quantity=200');
         $books = $response->json();
-        foreach ($books['data'] as $key => $book) {
-            Book::create($book);
-        }
+        Book::insert($books['data']);
     }
 }
