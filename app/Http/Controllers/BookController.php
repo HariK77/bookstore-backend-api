@@ -63,7 +63,7 @@ class BookController extends Controller
         Book::create(array_merge($request->validated(), ['published' => now()]));
 
         $data = array(
-            'message' => 'Book "' . $request->name . '" has been created successfully !!'
+            'message' => 'Book "' . $request->title . '" has been created successfully !!'
         );
         return $this->sendResponse($data, 200);
     }
@@ -102,7 +102,7 @@ class BookController extends Controller
         $book->update($request->validated());
 
         $data = array(
-            'message' => 'Book "' . $request->name . '" has been updated successfully !!'
+            'message' => 'Book "' . $request->title . '" has been updated successfully !!'
         );
         return response()->json($data, 200);
     }

@@ -23,8 +23,16 @@ class UpdateBookRequest extends FormRequest
      */
     public function rules()
     {
+        $book = $this->route()->parameter('book');
+
         return [
-            //
+            'title' => 'required|string|min:3',
+            'author' => 'required|string|min:3',
+            'genre' => 'required|string|min:3',
+            'description' => 'required|string|min:3',
+            'isbn' => 'required|min:3|unique:books,isbn,'.$book->id,
+            'image' => 'required|string|min:3',
+            'publisher' => 'required|string|min:3',
         ];
     }
 }
