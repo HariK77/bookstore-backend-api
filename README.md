@@ -1,6 +1,6 @@
 # BookStore App (Backend Api)
 
-This is a simple REST API app, made with [Laravel 9](https://laravel.com/) framework. It has [Laravel Sanctum](https://laravel.com/docs/9.x/sanctum) authentication, book crud functionality etc., It has a (frontend React App)[https://github.com/HariK77/bookstore-app] to consume this api.
+This is a simple REST API app, made with [Laravel 9](https://laravel.com/) framework. It has [Laravel Sanctum](https://laravel.com/docs/9.x/sanctum) authentication, search, crud and admin users etc., It has a [frontend React App](https://github.com/HariK77/bookstore-app) to consume this api.
 
 More information about [Laravel 9](https://laravel.com) framework can be found [here](https://laravel.com/docs/9.x).
 
@@ -27,6 +27,14 @@ Please make sure you have all the required settings(localhost) to laravel 9 appl
 
 - run `php artisan serve` and access `http://127.0.0.1:8000/api/status` to check api is working.
 - Import the postman collection (`Bookstore.postman_collection.json`) in [postman](https://www.postman.com/downloads/) application that has been included in the repository.
+- To test in application, go to this [repository](https://github.com/HariK77/bookstore-app). Follow the instructions mentioned in README.md file. start both applications and test.
+- Admin User Credentials: (Only Admin can add, update books)
+  - Email: `admin@bookstore.com`
+  - Password: `password`
+- Normal Users:
+  - Emails: `customerone@bookstore.com`, `customertwo@bookstore.com`
+  - Password: `password` same for both
+
 
 
 
