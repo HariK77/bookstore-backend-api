@@ -14,7 +14,7 @@ Please make sure you have all the required settings(localhost) to laravel 9 appl
 - cd into the installation folder `$ cd bookstore-backend-api`
 - run `$ composer install`.
 - run `$ sudo chmod -R 0777 storage/` (no need for windows xampp). 
-- create a .env file from .env.example, run `$ cp env.example .env` (In windows just rename the file manually).
+- create a .env file from .env.example, run `$ cp .env.example .env` (In windows just rename the file manually).
 - change the `APP_URL` in .env file, to whichever url you are going to serve this application. ex: `http://127.0.0.1:8000`
 - generate the key `php artisan key:generate`
 - add `APP_SECRET="My-App-Secret-777"` in .env file. used for creating tokens.
