@@ -27,12 +27,7 @@ class BookController extends Controller
         $query = Book::query();
 
         if ($request->search) {
-            $query->where('title', 'LIKE', "%{$request->search}%");
-            $query->orWhere('author', 'LIKE', "%{$request->search}%");
-            $query->orWhere('genre', 'LIKE', "%{$request->search}%");
-            $query->orWhere('isbn', 'LIKE', "%{$request->search}%");
-            $query->orWhere('publisher', 'LIKE', "%{$request->search}%");
-            $query->orWhere('published', 'LIKE', "%{$request->search}%");
+            $query->search($request->search);
         }
 
         $books = $query->orderBy('id', 'DESC')->paginate(12);

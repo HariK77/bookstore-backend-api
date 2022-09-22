@@ -20,4 +20,15 @@ class Book extends Model
         "published",
         "publisher",
     ];
+
+    public function scopeSearch($query, $searchTerm)
+    {
+        $query->where('title', 'LIKE', "%{$searchTerm}%");
+        $query->orWhere('author', 'LIKE', "%{$searchTerm}%");
+        $query->orWhere('genre', 'LIKE', "%{$searchTerm}%");
+        $query->orWhere('isbn', 'LIKE', "%{$searchTerm}%");
+        $query->orWhere('publisher', 'LIKE', "%{$searchTerm}%");
+        $query->orWhere('published', 'LIKE', "%{$searchTerm}%");
+        return $query;
+    }
 }
